@@ -1,0 +1,10 @@
+g.main <- df.plot %>% 
+  ggplot(aes(x=Axis1, y=Axis2, shape=Group, col=Study)) +
+  geom_point() + 
+  scale_colour_manual(values=study.cols, guide=FALSE) + 
+  scale_shape_manual(values=c(19, 1), guide=FALSE) + 
+  scale_x_continuous(position='top') +
+  xlab(axis.1.title) + ylab(axis.2.title) +
+  theme(panel.background = element_rect(fill='white', color = 'black'),
+        axis.ticks=element_blank(), axis.text = element_blank(),
+        panel.grid = element_blank())
